@@ -1,15 +1,15 @@
 from logging.config import stopListening
 
 my_list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
-index = 0
-while index < len(my_list):
-    if my_list[index] < 0:
+i = 0
+while i < len(my_list):
+    if my_list[i] < 0:
         break
-    elif my_list[index] == 0:
-        print(my_list[index + 1])
-        index += 1
+    elif my_list[i] == 0:
+        print(my_list[i + 1])
+        i += 1
         continue
     else:
-        print(my_list[index])
-        index += 1
+        print(my_list[i])
+        i += 1
 
