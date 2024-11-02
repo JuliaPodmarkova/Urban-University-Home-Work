@@ -1,4 +1,5 @@
 # Локальное, встроенное и глобальное пространство имен
+from inspect import stack
 from sqlite3.dbapi2 import paramstyle
 
 print("_____________________________________________")
@@ -191,3 +192,57 @@ def my_sum(n, *args, txt = "Сумма чисел"):
     print(txt + ":", s)
 my_sum(1, 1, 2, 3, 4, 5)
 my_sum(2, 2, 3, 4, 5, txt = "Сумма квадратов")
+
+# Рекусия
+print("_____________________________________________")
+print("Рекусия - способ определения функции, когда эта функция вызывает саму себя")
+print()
+
+def summa(n):
+    if n == 0:
+        return 0
+    else:
+        return n + summa(n - 1)
+print(summa(5))
+
+stack = []
+stack.append(1)
+print("Добавили элемент ", stack)
+stack.append(2)
+print("Добавили элемент ", stack)
+stack.append(3)
+print("Добавили элемент ", stack)
+print(stack)
+stack.pop()
+print("Убрали элемент ", stack)
+stack.pop()
+print("Убрали элемент ", stack)
+stack.pop()
+print("Убрали элемент ", stack)
+print(stack)
+
+# Встроенные функции Python
+print("_____________________________________________")
+print("Встроенные функции Python")
+print()
+
+#int() - целое число
+#float() - число с плавающей запятой
+#bool() - логические значения
+#str() - строки
+#list() - список
+#tuple() - кортеж
+#dict() - словарь
+#set() - множество
+
+salary = [2300, 1800.80358, 5000.8888444, 1234.521545138, 7500.125578]
+print('Всего сотрудников: ', len(salary))
+print("Общая сумма ФОТ: ", round(sum(salary), 3))
+print("Средняя зарплата: ", round(sum(salary)/len(salary), 2))
+print("Минимальная зарплата: ", round(min(salary), 2))
+print("Максимальная зарплата: ", round(max(salary), 2))
+names = ['Денис', 'Антон', 'Егор', 'Катя', 'Женя']
+zipped = dict(zip(names, salary))
+#print(list(zipped))
+#print(dict(zipped))
+print("Зарплата Дениса", zipped['Денис'])
