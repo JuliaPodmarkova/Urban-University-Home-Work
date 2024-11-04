@@ -1,5 +1,6 @@
 # Локальное, встроенное и глобальное пространство имен
 from inspect import stack
+from pprint import pprint
 from sqlite3.dbapi2 import paramstyle
 
 print("_____________________________________________")
@@ -221,7 +222,7 @@ stack.pop()
 print("Убрали элемент ", stack)
 print(stack)
 
-# Встроенные функции Python
+# Встроенные функции Python 1.1
 print("_____________________________________________")
 print("Встроенные функции Python")
 print()
@@ -246,3 +247,26 @@ zipped = dict(zip(names, salary))
 #print(list(zipped))
 #print(dict(zipped))
 print("Зарплата Дениса", zipped['Денис'])
+
+# Встроенные функции. 1.2
+print("_____________________________________________")
+print("Встроенные функции 1.2")
+print()
+
+a = [1, 1, 1]
+print(any(a))
+b = [1, 1, 1]
+print(any(b))
+print(all(a))
+print(all(b))
+print(dir(a))
+print(type(b))
+print(isinstance(b, str))
+print(a == b)
+print(a is b)
+print(id(a), id(b))
+c = b
+c[0] = 2
+print(id(c), id(b))
+print(c, b)
+print(help(a))
