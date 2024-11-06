@@ -270,3 +270,43 @@ c[0] = 2
 print(id(c), id(b))
 print(c, b)
 print(help(a))
+
+# Практика по функциям
+print("_____________________________________________")
+print("Практика по функциям")
+print()
+
+#Функция поиска максимального числа в списке
+def findMax(list_):
+    max_ = list_[0]
+    for i in list_:
+        if i > max_:
+            max_ = i
+    return max_
+list0_ = [1, 54, 12, -1, 2, 4]
+print("Список: ", list0_)
+print("Максимальное число в списке:", findMax(list0_))
+
+#Функция по подсчету четных чисел в списке
+def countEven(list_):
+    counter = 0
+    for i in list_:
+        if i == 0:
+            continue
+        if i % 2 == 0:
+            counter += 1
+    return counter
+list1_ = [6, 54, 12, 0, -1, 2, 4]
+print("Список: ", list1_)
+print("Количество четных чисел в списке:", countEven(list1_))
+
+#Функция уникальный список
+def unique(list_):
+    newList = []
+    for i in list_:
+        if i not in newList:
+            newList.append(i)
+    return newList
+list2_ = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 10]
+print("Список: ", list2_)
+print("Уникальные числа в списке:", unique(list2_))
