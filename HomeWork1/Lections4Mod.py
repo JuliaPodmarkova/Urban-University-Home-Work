@@ -1,14 +1,20 @@
 # использование данных из модуля (листа *.py)
-import lists as li
-import defen as de
-from module_2_3 import my_list
-from module_1_4 import *
-print(dir(li))
-print()
-print(li.food)
-print()
-de.twoDayLottery('Monday', 'Tusdey')
-print()
-print(my_list)
-print()
-print(my_string)
+#import secondModuleToLections as m2
+#from secondModuleToLections import a
+#from secondModuleToLections import *
+from secondModuleToLections import sey_hi as sh
+import sys
+
+print("Привет, я из модуля 2")
+#m2.sey_hi()
+#print(a)
+#main()
+#print(m2.__name__)
+sh()
+
+# Модули. Способы импортирования кода
+
+b = 10
+
+for path in sys.path:
+    print(path)
