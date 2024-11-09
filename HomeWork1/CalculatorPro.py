@@ -1,4 +1,5 @@
 import os
+from idlelib.configdialog import font_sample_text
 from tkinter import PhotoImage
 
 os.environ["TCL_LIBRARY"] = 'C:/Users/user/AppData/Local/Programs/Python/Python313/tcl/tcl8.6'
@@ -12,6 +13,7 @@ import sys
 
 window = Tk()
 window.title("Calculator")
+window.configure(background='purple1')
 
 button_list = [
 "7", "8", "9", "+", "*",
@@ -26,12 +28,12 @@ c = 0
 for i in button_list:
     rel = ""
     cmd=lambda x=i: calc(x)
-    ttk.Button(window, text=i, command = cmd, width = 10).grid(row=r, column = c)
+    ttk.Button(window, text=i, command = cmd, width = 15).grid(row=r, column = c)
     c += 1
     if c > 4:
         c = 0
         r += 1
-calc_entry = Entry(window, width = 33)
+calc_entry = Entry(window, width = 33, bg = "MediumPurple1", fg ="OliveDrab1", font = "Arial 15 bold")
 calc_entry.grid(row=0, column=0, columnspan=5)
 
 #логика калькулятора
