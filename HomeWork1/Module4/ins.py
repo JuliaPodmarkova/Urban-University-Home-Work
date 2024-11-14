@@ -1,0 +1,11 @@
+from Module4.Module_4.alg import *
+data_1 = list(map(int, input("Введите числа через пробел: ").split()))
+data_2 = list(map(int, input("Введите числа через пробел: ").split()))
+data_3 = list(map(int, input("Введите числа через пробел: ").split()))
+print(data_1, data_2, data_3)
+bubbleSort(data_1)
+selectionSort(data_2)
+insertionSort(data_3)
+print("Пузырьковая сортировка: ", data_1)
+print("Сортировка выбором: ", data_2)
+print("Сортировка вставкой: ", data_3)
