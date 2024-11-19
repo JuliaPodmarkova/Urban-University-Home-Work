@@ -1,4 +1,7 @@
 class Human:
+
+    head = False
+
     def __init__(self, name, surname, age):
         self.name = name
         self.surname = surname
@@ -62,3 +65,9 @@ max.surname = "Petrov"
 #del(max)
 #print(len(den))
 #input()
+#print(Human.head)
+#print(Human.__dict__)
+#print(den.__dict__)
+den.head = True
+print(den.head)
+print(den.__dict__)
