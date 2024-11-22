@@ -1,8 +1,7 @@
 from random import choice
 from tkinter.ttk import Style
 
-from Module5. import
-
+from Module5.color import *
 class User:
     """
     Класс пользователя, содержащий атрибуты: логин и пароль
@@ -39,20 +38,20 @@ if __name__ == '__main__':
             password = input('Введите пароль: ')
             if login in database.data:
                 if password == database.data[login]:
-                    print('Вход выполнен.')
+                    out_green('Вход выполнен.')
                     break
                 else:
-                    print('Неверный пароль')
+                    out_red('Неверный пароль')
             else:
-                print('Пользователь не найден.')
+                out_red('Пользователь не найден.')
         if choice == 2:
             user = User(input('Введите логин: '), password := input('Введите пароль: '),
                         password2 := input('Повторите пароль: '))
             if password != password2:
-                print("Пароли не совпадают")
+                out_red("Пароли не совпадают")
                 continue
             if check_password(password) != 1:
-                print("Пароль не соответствует минимальным критериям: длина 8 символов, одна цифра, одна заглавная и одна прописная буквы")
+                out_red("Пароль не соответствует минимальным критериям: длина 8 символов, одна цифра, одна заглавная и одна прописная буквы")
                 continue
             database.add_user(user.username, user.password)
         print(database.data)
