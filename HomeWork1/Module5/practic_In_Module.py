@@ -1,4 +1,7 @@
 from random import choice
+from tkinter.ttk import Style
+
+from Module5. import
 
 class User:
     """
@@ -30,12 +33,27 @@ def check_password(password):
 if __name__ == '__main__':
     database = Database()
     while True:
-        choice = input('Приветствую! Выберите действие: \n1 - Вход\n2 - Регистрация\n')
-        user = User(input('Введите логин: '), password := input('Введите пароль: '), password2 := input('Повторите пароль: '))
-        if password != password2:
-            exit("Пароли не совпадают")
-        if check_password(password) != 1:
-            exit("Пароль не соответствует минимальным критериям: длина 8 символов, одна цифра, одна заглавная и одна прописная буквы")
-        database.add_user(user.username, user.password)
+        choice = int(input('Приветствую! Выберите действие: \n1 - Вход\n2 - Регистрация\n'))
+        if choice == 1:
+            login = input('Введите логин: ')
+            password = input('Введите пароль: ')
+            if login in database.data:
+                if password == database.data[login]:
+                    print('Вход выполнен.')
+                    break
+                else:
+                    print('Неверный пароль')
+            else:
+                print('Пользователь не найден.')
+        if choice == 2:
+            user = User(input('Введите логин: '), password := input('Введите пароль: '),
+                        password2 := input('Повторите пароль: '))
+            if password != password2:
+                print("Пароли не совпадают")
+                continue
+            if check_password(password) != 1:
+                print("Пароль не соответствует минимальным критериям: длина 8 символов, одна цифра, одна заглавная и одна прописная буквы")
+                continue
+            database.add_user(user.username, user.password)
         print(database.data)
 
