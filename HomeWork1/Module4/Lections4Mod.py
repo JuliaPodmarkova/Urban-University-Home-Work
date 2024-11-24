@@ -2,7 +2,7 @@
 #import secondModuleToLections as m2
 #from secondModuleToLections import a
 #from secondModuleToLections import *
-from secondModuleToLections import sey_hi as sh
+from Module4.secondModuleToLections import sey_hi as sh
 import sys
 
 print("Привет, я из модуля 2")
