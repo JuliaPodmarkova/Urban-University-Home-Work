@@ -48,9 +48,6 @@ class PoisonousAnimal(Animal):
 class Duckbill(PoisonousAnimal, Birds, AquaticAnimal):
     sound = 'Click-click-click'
 
-
-
-
 db = Duckbill(10)
 print(db.live)
 print(db.beak)
@@ -67,8 +64,4 @@ db.dive_in(6)
 
 db.get_coords()
 
-
-
 db.lay_eggs()
-
-
