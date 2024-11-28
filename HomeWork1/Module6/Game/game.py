@@ -34,9 +34,6 @@ class Bar(ad.Sprite):
         if self.left <= 0:
             self.left = 0
 
-
-
-
 class Game(ad.Window):
     def __init__(self, width, height, title):
         super().__init__(width, height, title)
