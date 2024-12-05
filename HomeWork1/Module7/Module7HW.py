@@ -18,19 +18,20 @@ class WordsFinder:
 
     def find(self, word):
         result = {}
-        for i, word_ in self.get_all_words().items():
-            for j, wd in enumerate(word_, 1):
-                if wd == word.lower():
+        for i, word1 in self.get_all_words().items():
+            for j, word2 in enumerate(word1, 1):
+                if word2 == word.lower():
                     result[i] = j
                     break
         return result
 
 
     def count(self, word):
-        result_={}
-        for i, word_ in self.get_all_words().items():
-            result_[i] = word_.count(word.lower())
-        return result_
+        result1 = {}
+        for i, word3 in self.get_all_words().items():
+            result1[i] = word3.count(word.lower())
+        return result1
+
 print('work with test_file.txt')
 finder1 = WordsFinder('test_file.txt')
 print(finder1.get_all_words())
