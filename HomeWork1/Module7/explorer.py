@@ -1,4 +1,7 @@
 import os
+import time
+
+from Module7.HomeWork7 import directory
 
 os.environ["TCL_LIBRARY"] = 'C:/Users/user/AppData/Local/Programs/Python/Python313/tcl/tcl8.6'
 os.environ["TK_LIBRARY"] = 'C:/Users/user/AppData/Local/Programs/Python/Python313/tcl/tk8.6'
@@ -21,7 +24,7 @@ window.resizable(width=False, height=False)
 text = tk.Label(window, text='Файл',width=65, height=3, background='silver',
                 foreground='blue')
 text.grid(column=1, row=1)
-button_select = tk.Button(window, width=20, height=3, text='Выбрать файл',
+button_select = tk.Button(window, width=10, height=3, text='Выбрать файл',
                           background='silver', foreground='blue', command=file_select)
 button_select.grid(column=1, row=2, pady=5)
 window.mainloop()
